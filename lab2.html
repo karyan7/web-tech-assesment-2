@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <h2>Workshop Registration Form</h2>
+    <form id="registrationForm">
+        <label for="name">Participant's Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Participant's Age:</label><br>
+        <input type="number" id="age" name="age" required min="0" oninput="calculateFee()"><br><br>
+
+        <label for="contact">Contact Information:</label><br>
+        <input type="text" id="contact" name="contact" required><br><br>
+
+        <label for="workshop">Select Workshop:</label><br>
+        <select id="workshop" name="workshop" required>
+            <option value="workshop1">Workshop 1</option>
+            <option value="workshop2">Workshop 2</option>
+            <option value="workshop3">Workshop 3</option>
+        </select><br><br>
+
+        <label for="fee">Registration Fee:</label><br>
+        <input type="text" id="fee" name="fee" readonly><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <div id="confirmationMessage"></div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
